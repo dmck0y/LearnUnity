@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class Hacker : MonoBehaviour {
 		ShowMainMenu("Welcome David");
 	}
 
-	void ShowMainMenu (string greeting) {
+    void ShowMainMenu (string greeting) {
 		Terminal.ClearScreen();
 		Terminal.WriteLine(greeting);	
 		Terminal.WriteLine("What would you like to hack into?");	
@@ -18,9 +19,9 @@ public class Hacker : MonoBehaviour {
 		Terminal.WriteLine("Press 3 - NSA");	
 		Terminal.WriteLine("Enter your selection:");	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	void OnUserInput(string input)
+		{
+			print(input);
+		}
 }
